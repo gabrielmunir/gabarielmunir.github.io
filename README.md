@@ -1,1 +1,0 @@
-# gabarielmunir.github.io
