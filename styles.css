@@ -22,4 +22,32 @@ body {
     padding: 20px;
     text-align: center;
   }
-  
+
+  /* Navigation styles */
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: inline;
+  }
+
+  nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+  }
+
+  /* Active page style */
+  nav ul li a.active {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  /* Hover effect */
+  nav ul li a:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
