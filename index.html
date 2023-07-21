@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <link rel="stylesheet" href="styles.css">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,11 +13,22 @@
 <body>
   <header>
     <nav>
-      <ul>
+      <ul class="menu">
         <li><a href="#" onclick="loadContent('pages/home.html')">Home</a></li>
         <li><a href="#" onclick="loadContent('pages/about.html')">About</a></li>
         <li><a href="#" onclick="loadContent('pages/impressum.html')">Impressum</a></li>
-        <li><a href="#" onclick="loadContent('pages/chemistryandecology.html')">Chemistry & Ecology</a></li>
+        <li>
+          <a href="#">Term 1</a>
+          <div class="submenu">
+            <a href="#" onclick="loadContent('pages/mathematics1.html')">Mathematics 1</a>
+          </div>
+        </li>
+        <li>
+          <a href="#">Term 2</a>
+          <div class="submenu">
+            <a href="#" onclick="loadContent('pages/chemistryandecology.html')">Chemistry & Ecology</a>
+          </div>
+        </li>
       </ul>
     </nav>
     <h1>SBT @ UCB</h1>
@@ -33,7 +43,7 @@
     <!-- Add your footer content here -->
     <p>This website is not endorsed by the university!</p>
     <p>If there are any copyright infringements or you are not happy with something, please contact me personally.</p>
-    <p>Information in that regards is available on the Impressum page.</p>
+    <p>Information in that regard is available on the Impressum page.</p>
   </footer>
 
   <script>
