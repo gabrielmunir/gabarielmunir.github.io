@@ -3,12 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
   <title>SBT@UCB</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="loadContent.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 <body>
   <header>
@@ -18,9 +25,10 @@
         <li><a href="#" onclick="loadContent('pages/about.html')">About</a></li>
         <li><a href="#" onclick="loadContent('pages/impressum.html')">Impressum</a></li>
         <li>
-          <a href="#">Year 1</a>
+          <a href="#">Term 1</a>
           <div class="submenu">
             <a href="#" onclick="loadContent('pages/Year 1/Term 1/mathematics1.html')">Mathematics 1</a>
+            <a href="#" onclick="loadContent('pages/Year 1/Term 1/physics1.html')">Physics 1</a>
           </div>
         </li>
         <li>
@@ -46,12 +54,14 @@
     <p>Information in that regard is available on the Impressum page.</p>
   </footer>
 
+  <!-- Modified JavaScript function -->
   <script>
     function loadContent(url) {
       fetch(url)
         .then(response => response.text())
         .then(data => {
           document.getElementById('main-content').innerHTML = data;
+          MathJax.typeset(); // Trigger MathJax to reprocess and render LaTeX equations
         })
         .catch(error => {
           console.error('Error:', error);
